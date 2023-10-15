@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NotificationController {
 
-    @PostMapping
+    @PostMapping("/sendNotification")
     public String notifyUser(@RequestBody UserDetails userDetails){
-        return "Added user "+ userDetails.getName();
+        return "User "+ userDetails.getName()+"("+ userDetails.getEmail()+ ") has been successfully registered.";
     }
 }
