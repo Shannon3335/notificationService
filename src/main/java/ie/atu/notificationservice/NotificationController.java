@@ -9,6 +9,6 @@ public class NotificationController {
 
     @PostMapping
     public String notifyUser(@RequestBody UserDetails userDetails){
-        return "Added user "+UserDetails.getName();
+        return "Added user "+ userDetails.getName();
     }
 }
